@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambilight</title>
+
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <div class="navbar" id="myNavbar"> 
+        <a href="#home">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Contacts
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <p>mail@gmail.com</p>
+                <p>+38097*******</p>
+                <p>+38063*******</p>
+            </div>
+        </div>
+        <a href="javascript:void(0);"
+        style="font-size:15px;" class="icon"
+        onclick="myFunction()">&#9776;</a>
+    </div>
+    <h1 id="home">Home</h1>
+    <video autoplay muted loop id="myVideo" width=100% height=100% style="margin-bottom: 100px;" >
+        <source src="bvideo.mp4" type="video/mp4">
+    </video>
+    <div class="main">       
+        <p>In home cinema and video editing technology, bias lighting is a weak light source on the backside of a screen or monitor that illuminates the wall or surface behind and just around the display.</p>
+        <hr class="new">
+        <p>The purpose of bias lighting is to reduce the perceived brightness of the display as a result of the contrast with the slightly illuminated area around it. This reduces the eye strain and fatigue that occurs when viewing a bright display against a very dark background for an extended time, and increases the perceived blackness and contrast of the display.</p>
+        <hr class="new">
+        <p>Bias lighting has been used since the early days of television in the form of "TV lamps", often taking the shape of an animal, that were set atop television sets and projected light onto the wall behind the set. As of the 2000s, bias lights often use LEDs, attach to the backside of flat-panel displays, and draw power from a USB or HDMI port.Some bias lighting kits even use a webcam pointed at a TV or monitor screen to read colors and change television backlights accordingly. They may also be integrated into the display. Some Philips televisions since 2002, for example, feature integrated bias lights with the brand name "Ambilight".</p> 
+    </div>
+
+
+
+    <div class="slideshow-container"  style="margin-top: 150px;">
+
+    <div class="mySlides fade">
+     <div class="numbertext"></div>
+     <img src="amb1.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+
+    <div class="numbertext"></div>
+     <img src="Ambilight-1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext"></div>
+        <img src="amb.jpg" style="width:100%">
+    </div>
+
+
+    </div>
+    <br>
+
+    <div style="text-align:center; margin-bottom: 150px;">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+
+    <div class="sub">
+        <h2>Contact us</h2>
+    </div>
+
+    <div class="container">
+        <form action="action_page.php">
+      
+          <label for="fname" >Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name..">
+
+          <label for="Email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Your email..">
+
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit" style="width: 100%; text-align: center;">
+      
+        </form>
+      </div>
+
+
+     <script>
+        let slideIndex = 0
+        
+        function showSlides() {
+          const slides = document.querySelectorAll('.mySlides')
+          const dots = document.querySelectorAll('.dot')
+        
+          slides.forEach((slide) => (slide.style.display = 'none'))
+        
+          slideIndex++
+        
+          if (slideIndex > slides.length) slideIndex = 1
+        
+          dots.forEach((dot) => (dot.className = dot.className.replace(' active', '')))
+        
+          slides[slideIndex - 1].style.display = 'block'
+          dots[slideIndex - 1].className += ' active'
+        }
+        
+        showSlides()
+        setInterval(showSlides, 4000)
+        
+        </script>
+
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myNavbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+    </script>
+    
+
+        
+</body>
+</html>

@@ -1,0 +1,339 @@
+html{
+  scroll-behavior: smooth;
+}
+/*navigation bar*/
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+.navbar {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.603);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.navbar a {
+  font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+  display: flex;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 25px 16px;
+  text-decoration: none;
+}
+
+
+
+.navbar a:hover, .dropdown:hover .dropbtn{
+  background: #ddd;
+  color: black;
+}
+
+.navbar a:last-child{
+  background-color: black;
+  color: #ddd;
+}
+
+.navbar .icon {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.603);
+}
+
+.dropdown .dropbtn {
+  font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+  font-size: 15px;
+  display: flex;
+  color: rgb(255, 255, 255);
+  background-color: inherit;
+  border: none;
+  outline: none;
+  text-align: center;
+  padding: 25.5px 16px;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.603);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1; 
+}
+
+.dropdown-content p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  display: flex;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  position: relative;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+.dropbtn:hover {
+  background-color: rgb(221, 221, 221);
+  color: #000000;
+}
+
+@media screen and (max-width: 600px){
+  .navbar a:first-child, .dropdown .dropbtn{
+  display: none;
+}
+  .navbar a.icon {
+    float: left;
+    display: block;
+    position: relative;
+    right: 40%;
+  }
+}
+
+
+@media screen and (max-width: 600px){
+  .navbar.responsive {
+    position:fixed;
+  }
+  .navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotate(90deg);
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown {float: none;}
+  .navbar.responsive .dropdown-content {  
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.603);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; 
+  }
+  .navbar.responsive .dropdown .dropbtn{
+    display: flex;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+.container label{
+  font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+  display: flex;
+  color: rgb(207, 207, 207);
+} 
+
+input[type=text], select, textarea {
+  font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+  color: #1b1b1b;
+  background-color: #dbdbdb;
+  width: 100%; 
+  padding: 12px; 
+  border-radius: 2px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px;
+  resize: vertical 
+}
+
+input[type=submit] {
+  font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+  color: rgb(0, 0, 0);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #808080;
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main p {
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+  margin-top: 0px;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: rgb(214, 214, 214);
+}
+
+hr.new{
+  border-top: 1px solid rgb(158, 158, 158);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+body{
+  background-color: black;
+  margin: 0;
+}
+   
+
+
+
+
+
+
+
+
+
+/*SLIDER*/
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(75, 75, 75);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #f5f5f5;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*SUB*/
+
+/* Style the form element with a border around it */
+form {
+  border: 4px solid #000000;
+}
+
+/* Add some padding and a grey background color to containers */
+.container {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  color: aliceblue;
+}
+
+.sub {
+  margin-top: -30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  color: #ddd;
+}
+
+/* Style the input elements and the submit button */
+input[type=text], input[type=submit] {
+  margin: 10%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #1a1a1ace;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
